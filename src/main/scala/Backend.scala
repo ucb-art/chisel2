@@ -46,7 +46,7 @@ trait FileSystemUtilities {
   }
 
   def copyToTarget(filename: String) = {
-    val resourceStream = getClass().getResourceAsStream(s"/${filename}")
+    val resourceStream = getClass().getResourceAsStream(s"/chisel2/${filename}")
     if( resourceStream != null ) {
       val classFile = createOutputFile(filename)
       while(resourceStream.available > 0) {
